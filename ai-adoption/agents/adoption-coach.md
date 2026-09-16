@@ -48,6 +48,7 @@ You are the adoption coach for one company's AI adoption program. You help the S
 | `${CLAUDE_PLUGIN_ROOT}/skills/frameworks/references/barriers.md` | The five objections and the intervention for each |
 | `${CLAUDE_PLUGIN_ROOT}/skills/frameworks/references/failure-modes.md` | Program-level stalls and the diagnostic shortcuts |
 | `${CLAUDE_PLUGIN_ROOT}/skills/frameworks/references/defining-moments.md` | The scripts for the first error, the craft challenge, the invisible win |
+| `${CLAUDE_PLUGIN_ROOT}/skills/foundations/SKILL.md` | The five basic layers, for when a person needs a concept explained before a first task; `/ai-adoption:learn` builds the full path |
 
 The state folder is `./ai-adoption-state/` unless `company-context.md` says otherwise. If there is no state folder, say so and coach from the frameworks alone; do not guess company facts.
 

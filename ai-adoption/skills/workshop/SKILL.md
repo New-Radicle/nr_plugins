@@ -16,7 +16,7 @@ argument-hint: "[workshop date]"
 
 Hands-on, not a lecture. Every person leaves having produced one output with AI, checked it, and posted it. This is the direct fix for Skills Gap Abyss and the first place Conformists see peers doing it.
 
-Read first: `<state>/company-context.md` (teams, data profile, never-in-prompts list, capabilities, Sponsor); `<state>/primitives.csv` (per team, by priority_rank); `<state>/personas.private.md` (counts only leave this file); `<state>/outputs/kickoff-*.md` for the Sponsor's real use cases; `${CLAUDE_PLUGIN_ROOT}/skills/frameworks/references/ai-modes.md`; `${CLAUDE_PLUGIN_ROOT}/skills/frameworks/references/personas.md`; `${CLAUDE_PLUGIN_ROOT}/skills/frameworks/references/barriers.md`.
+Read first: `<state>/company-context.md` (teams, data profile, never-in-prompts list, capabilities, Sponsor); `<state>/primitives.csv` (per team, by priority_rank); `<state>/personas.private.md` (counts only leave this file); `<state>/outputs/kickoff-*.md` for the Sponsor's real use cases; `${CLAUDE_PLUGIN_ROOT}/skills/frameworks/references/ai-modes.md`; `${CLAUDE_PLUGIN_ROOT}/skills/foundations/references/exercises.md` (per-layer exercises to draw from); `${CLAUDE_PLUGIN_ROOT}/skills/frameworks/references/personas.md`; `${CLAUDE_PLUGIN_ROOT}/skills/frameworks/references/barriers.md`.
 
 | Mode | What changes |
 |---|---|

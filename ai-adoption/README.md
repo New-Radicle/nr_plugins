@@ -44,6 +44,7 @@ Setup asks who you are (Rollout Lead, Sponsor, or cohort operator), which of fiv
 | `prioritize` | Week 0 | Three-factor ranking, top 10 with first workflows |
 | `map-personas` | Week 0-1 | Adoption personas per person, private to the leads |
 | `risk-matrix` | Week 0 | Pre-filled risk matrix from archetype defaults and data profile |
+| `learn` | Any time | Personal learning path on the five foundations, tied to the person's role and task |
 | `week` | Any time | What week it is, what is due, who owns it |
 | `kickoff` | Week 1 | Sponsor's kickoff message from the Sponsor's own use cases |
 | `workshop` | Week 1-2 | 60-minute hands-on workshop plan with per-role exercises |
@@ -55,7 +56,7 @@ Setup asks who you are (Rollout Lead, Sponsor, or cohort operator), which of fiv
 | `impact-report` | Week 11, then monthly | Results against targets for the Sponsor to present |
 | `plan-next` | Week 12 | Options memo for what comes after the program |
 
-Reference skills loaded automatically when needed: `frameworks` (personas, failure modes, barriers, defining moments, team rubric, AI modes, scorecard model, program calendar), `archetypes` (five starter libraries plus physical-work primitives), `adapters` (the capability contract and one recipe per backend).
+Reference skills loaded automatically when needed: `foundations` (the five layers everyone needs: the model, what you feed it, what it can reach, how it runs, whether you can trust it; plus a glossary and twenty-minute exercises), `frameworks` (personas, failure modes, barriers, defining moments, team rubric, AI modes, scorecard model, program calendar), `archetypes` (five starter libraries plus physical-work primitives), `adapters` (the capability contract and one recipe per backend).
 
 Agent: `adoption-coach`, for resistance, stalled adoption, or "where do I start" questions.
 
