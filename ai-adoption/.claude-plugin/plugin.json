@@ -1,6 +1,6 @@
 {
   "name": "ai-adoption",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Run a structured AI adoption program inside your own tools. Assess the team, map operational primitives, size the economics, and execute a 6- or 12-week rollout with weekly check-ins, a scorecard, and an impact report. Works with zero connectors (files in a folder) or with Notion, Airtable, Google Drive, Slack, Gmail, and Google Calendar when they are connected.",
   "author": {
     "name": "New Radicle"

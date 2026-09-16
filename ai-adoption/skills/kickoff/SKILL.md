@@ -15,6 +15,8 @@ disable-model-invocation: true
 
 The first visible act of the program. Conformists, the largest group, decide from this message whether AI is optional here. It works only when the Sponsor describes things they actually did.
 
+Follow `${CLAUDE_PLUGIN_ROOT}/skills/frameworks/references/show-first.md`: do the work first from state and what is already known, show it (widget when available, table otherwise), and ask only for the gaps, with tappable options.
+
 Read first: `<state>/company-context.md` (Sponsor, Sponsor confirmed status, emphasis, data profile, capabilities, start date); `<state>/primitives.csv` (top three by priority_rank); `${CLAUDE_PLUGIN_ROOT}/skills/frameworks/references/program.md`; `${CLAUDE_PLUGIN_ROOT}/skills/frameworks/references/defining-moments.md`; `${CLAUDE_PLUGIN_ROOT}/skills/frameworks/SKILL.md` (principles). Check `<state>/outputs/` for a workshop plan with a date.
 
 | Mode | What changes |

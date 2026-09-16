@@ -17,6 +17,8 @@ argument-hint: "[path to 1:1 notes]"
 
 Private work for the leads. The output is a table nobody outside the Sponsor and Rollout Lead sees. It shapes the workshop, the playbooks, and the coaching, and it feeds the scorecard as counts only.
 
+Follow `${CLAUDE_PLUGIN_ROOT}/skills/frameworks/references/show-first.md`: do the work first from state and what is already known, show it (widget when available, table otherwise), and ask only for the gaps, with tappable options.
+
 Read first: `<state>/company-context.md`; `<state>/primitives.csv`; `${CLAUDE_PLUGIN_ROOT}/skills/frameworks/references/personas.md`; `${CLAUDE_PLUGIN_ROOT}/skills/frameworks/references/barriers.md`; `${CLAUDE_PLUGIN_ROOT}/skills/archetypes/references/<archetype>.md` (persona prior); `<state>/personas.private.md` if it already has rows.
 
 | Mode | What changes |

@@ -14,6 +14,8 @@ argument-hint: "[topic or task, e.g. 'write grant reports' or 'automate the week
 
 Turns "what do I need to learn?" into a short, ordered path. Five layers, scored quickly, then the two that matter most for this person's work. No lecture. Every step ends in something they can try in twenty minutes on their own material.
 
+Follow `${CLAUDE_PLUGIN_ROOT}/skills/frameworks/references/show-first.md`: do the work first from state and what is already known, show it (widget when available, table otherwise), and ask only for the gaps, with tappable options.
+
 Read first: `${CLAUDE_PLUGIN_ROOT}/skills/foundations/SKILL.md` and its references; `<state>/company-context.md` if a state folder exists (role, data profile, capabilities); `<state>/primitives.csv` if present (the person's team and top primitives). Without a state folder, work from what the person says.
 
 ## 1. Who is asking, and about what

@@ -27,6 +27,7 @@ Read only the reference you need:
 | Classifying a primitive: status, AI mode, speedup, quadrant | `references/ai-modes.md` |
 | Metrics, targets, and status rules | `references/scorecard-model.md` |
 | Week-by-week structure for Founder, Team, and Department modes | `references/program.md` |
+| How every skill talks to people: orient, work and show, ask only the gaps; widget blueprints | `references/show-first.md` |
 
 ## Principles that apply everywhere
 

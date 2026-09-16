@@ -15,6 +15,8 @@ disable-model-invocation: true
 
 The program ends; the practice continues. This memo gives the Sponsor a decision to make in one sitting, with the evidence on one page and the three honest options behind it.
 
+Follow `${CLAUDE_PLUGIN_ROOT}/skills/frameworks/references/show-first.md`: do the work first from state and what is already known, show it (widget when available, table otherwise), and ask only for the gaps, with tappable options.
+
 Read first: `<state>/company-context.md`; `<state>/companies.csv`; `<state>/scorecard.csv` (all weeks); `<state>/primitives.csv`; `<state>/use_cases.csv`; `<state>/checkins.csv`; `<state>/errors.md`; the most recent `<state>/outputs/impact-report-*.md` if present; `${CLAUDE_PLUGIN_ROOT}/skills/frameworks/references/scorecard-model.md`; `${CLAUDE_PLUGIN_ROOT}/skills/frameworks/references/program.md`; `${CLAUDE_PLUGIN_ROOT}/skills/archetypes/references/<archetype>.md`.
 
 | Mode | What changes |

@@ -17,6 +17,8 @@ argument-hint: "[monthly]"
 
 The document the Sponsor stands behind. Every number traces to a table in the state folder or to a labelled assumption in `company-context.md`. Nothing is rounded up.
 
+Follow `${CLAUDE_PLUGIN_ROOT}/skills/frameworks/references/show-first.md`: do the work first from state and what is already known, show it (widget when available, table otherwise), and ask only for the gaps, with tappable options.
+
 Read first: the state folder's `company-context.md` (mode, headcount, economics assumptions, people); `companies.csv`; `scorecard.csv`; `use_cases.csv`; `checkins.csv`; `primitives.csv`; `wins.md`; `errors.md` if present; earlier `<state>/outputs/impact-report-*.md`; `${CLAUDE_PLUGIN_ROOT}/skills/frameworks/references/scorecard-model.md`, `defining-moments.md`, `failure-modes.md`, `personas.md`.
 
 Do not read `personas.private.md` for this skill; migration counts come from `scorecard` and `checkins` rows.

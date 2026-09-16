@@ -17,6 +17,8 @@ argument-hint: "[team or department name]"
 
 Pass 1. Thirty to forty minutes in Team and Department modes; ten in Founder mode. The output is a baseline, not a verdict. The person running the program knows things an interview will not surface, so every score is presented for calibration before anything is written.
 
+Follow `${CLAUDE_PLUGIN_ROOT}/skills/frameworks/references/show-first.md`: do the work first from state and what is already known, show it (widget when available, table otherwise), and ask only for the gaps, with tappable options.
+
 Read first: the `## Discovery (confirmed)` section of `company-context.md` if present (skip every intake question it already answers, and cite it as the signal); the state folder's `company-context.md`; `${CLAUDE_PLUGIN_ROOT}/skills/frameworks/references/team-rubric.md`; `${CLAUDE_PLUGIN_ROOT}/skills/frameworks/references/scorecard-model.md`; `${CLAUDE_PLUGIN_ROOT}/skills/adapters/SKILL.md`. Run the adapter detection procedure before writing.
 
 ## 0. Scope and existing state

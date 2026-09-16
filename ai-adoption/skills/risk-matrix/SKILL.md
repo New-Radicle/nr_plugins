@@ -15,6 +15,8 @@ disable-model-invocation: true
 
 Pre-filled so the leads edit rather than invent. Twelve to twenty rows is normal; more than that and nobody reads it.
 
+Follow `${CLAUDE_PLUGIN_ROOT}/skills/frameworks/references/show-first.md`: do the work first from state and what is already known, show it (widget when available, table otherwise), and ask only for the gaps, with tappable options.
+
 Read first: `<state>/company-context.md` (archetype, data profile, never-in-prompts list, compliance owner, headcount, capabilities, Sponsor status); `${CLAUDE_PLUGIN_ROOT}/skills/archetypes/references/<archetype>.md` (Default risks table); `${CLAUDE_PLUGIN_ROOT}/skills/frameworks/references/failure-modes.md`; `${CLAUDE_PLUGIN_ROOT}/skills/frameworks/references/defining-moments.md`; `<state>/primitives.csv` if it exists.
 
 | Mode | What changes |

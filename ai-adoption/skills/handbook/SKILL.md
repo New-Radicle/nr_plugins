@@ -17,6 +17,8 @@ argument-hint: "[data-section]"
 
 Institutional layer. The handbook writes down what the team has been doing since Week 1 so it survives the people who started it. It is short, specific to this company, and built from the state folder, not from a template of generic policy.
 
+Follow `${CLAUDE_PLUGIN_ROOT}/skills/frameworks/references/show-first.md`: do the work first from state and what is already known, show it (widget when available, table otherwise), and ask only for the gaps, with tappable options.
+
 Read first: `<state>/company-context.md` (data profile, never-in-prompts list, connectors allowed, compliance owner, capabilities, the Risk matrix section); `<state>/primitives.csv` (status, ai_mode, priority_rank); `<state>/use_cases.csv` (rows with `visibility` team or shared); `<state>/errors.md`; `${CLAUDE_PLUGIN_ROOT}/skills/frameworks/SKILL.md` (principles and attribution line); `${CLAUDE_PLUGIN_ROOT}/skills/frameworks/references/defining-moments.md`; `${CLAUDE_PLUGIN_ROOT}/skills/frameworks/references/ai-modes.md`.
 
 | Mode | What changes |

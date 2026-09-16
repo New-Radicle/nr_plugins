@@ -23,7 +23,7 @@ Read first: `<state>/company-context.md` if it exists (name, website, data profi
 
 ## 1. Scope
 
-Confirm in one message: company name and website (from `$1` or company-context), and which of the five research areas to run. Default is all five.
+When called from `setup`, the scope is all five areas, no questions asked; go straight to section 3 and hand the claims back for setup's findings review. When run on its own, confirm in one message: company name and website (from `$1` or company-context), and which of the five research areas to run. Default is all five.
 
 | Area | What we look for | Feeds |
 |---|---|---|
@@ -76,7 +76,7 @@ Every finding, from either source, is one row:
 | Confidence | High: two independent sources, or the company's own site. Medium: one reputable source. Low: aggregator or inference. |
 | Why it matters | Which setup, assessment, or primitives question it answers |
 
-Present rows in batches of six, ordered by area. For each batch ask the person to reply per row: confirm, correct (with the right value), or reject. Do not argue with a rejection. A row that the person cannot judge is parked as "unverified" and left out.
+Present rows as findings-review widgets (blueprint B in `${CLAUDE_PLUGIN_ROOT}/skills/frameworks/references/show-first.md`), six per widget, ordered by area, with Confirm, Correct, Reject per row and a "Confirm all shown" button; markdown table and typed verdicts when no widget tool exists. Tapped and typed answers mean the same thing. Do not argue with a rejection. A row that the person cannot judge is parked as "unverified" and left out.
 
 Rules of evidence, from the agent and applied here too: absence in public sources is not evidence of absence; two sources before High; note the date on everything; "raised" may mean equity plus grants, keep the composition.
 

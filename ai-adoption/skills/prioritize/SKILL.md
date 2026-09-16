@@ -16,6 +16,8 @@ argument-hint: "[top N, default 10]"
 
 Pass 2. Turns the primitives table into an order of work. The ranking is arithmetic so it can be argued with; the calibration step is where the user's judgment enters, and it is recorded.
 
+Follow `${CLAUDE_PLUGIN_ROOT}/skills/frameworks/references/show-first.md`: do the work first from state and what is already known, show it (widget when available, table otherwise), and ask only for the gaps, with tappable options.
+
 Read first: `company-context.md` (Program emphasis, Size mode, Economics assumptions, Notes); `primitives` via `read_table`; the latest `<state>/outputs/economics-*.md` if present; `${CLAUDE_PLUGIN_ROOT}/skills/frameworks/references/ai-modes.md`; `${CLAUDE_PLUGIN_ROOT}/skills/archetypes/references/<code>.md` (emphasis); `${CLAUDE_PLUGIN_ROOT}/skills/adapters/SKILL.md`.
 
 ## 0. Preconditions

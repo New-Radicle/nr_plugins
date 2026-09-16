@@ -17,6 +17,8 @@ argument-hint: "[team name to add or redo]"
 
 Pass 1. Map the function, not the person. A primitive is a distinct, repeatable, observable, assignable unit of work. The starter list is a prompt for the conversation; the real list comes from what people actually do, including the work nobody owns.
 
+Follow `${CLAUDE_PLUGIN_ROOT}/skills/frameworks/references/show-first.md`: do the work first from state and what is already known, show it (widget when available, table otherwise), and ask only for the gaps, with tappable options.
+
 Read first: the `## Discovery (confirmed)` section of `company-context.md` if present (skip every intake question it already answers, and cite it as the signal); `company-context.md`; `${CLAUDE_PLUGIN_ROOT}/skills/archetypes/SKILL.md` and `references/<code>.md` for the archetype plus any added teams; `${CLAUDE_PLUGIN_ROOT}/skills/archetypes/references/physical-primitives.md` when the company has field, lab, plant, or installation work (archetypes A, B, C, or anything the user says in step 1); `${CLAUDE_PLUGIN_ROOT}/skills/frameworks/references/ai-modes.md`; `${CLAUDE_PLUGIN_ROOT}/skills/adapters/SKILL.md` and `references/files.md` (keys). Run the adapter detection procedure; note whether `econ_index_get_occupation_usage` is in the session.
 
 ## 0. Existing state

@@ -14,6 +14,8 @@ argument-hint: "[week number to preview]"
 
 A one-screen answer to "what week is it, what is due, who owns it". Runs in under a minute. Reads state, never writes it.
 
+Follow `${CLAUDE_PLUGIN_ROOT}/skills/frameworks/references/show-first.md`: do the work first from state and what is already known, show it (widget when available, table otherwise), and ask only for the gaps, with tappable options.
+
 Read first: the state folder's `company-context.md` (mode, roles, start date), `companies.csv`, `checkins.csv`, `scorecard.csv`; `${CLAUDE_PLUGIN_ROOT}/skills/frameworks/references/program.md`; `${CLAUDE_PLUGIN_ROOT}/skills/adapters/references/files.md` (week rule).
 
 If no state folder exists, say so and point to `/ai-adoption:setup`. Do not run it.

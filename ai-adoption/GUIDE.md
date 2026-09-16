@@ -26,7 +26,7 @@ Six skills, run in this order. In Founder mode they run in one session of about 
 
 ### 1. `/ai-adoption:setup` (20-30 minutes)
 
-Asks who you are, the company basics, which of five archetypes is closest (grant-stage hardware, scaling hardware, project developer, software, nonprofit or services), the four data-handling questions, and which connected tools to use. Confirms every inference before writing.
+Opens with a one-screen picture of the program and what it will do now versus ask later. Then it works first: public research on the company, detection of connected tools, and inference of size mode, archetype, and data-handling signals. You confirm, correct, or reject each finding before it is used. Only then does it ask what is left: the company basics, which of five archetypes is closest (grant-stage hardware, scaling hardware, project developer, software, nonprofit or services), the four data-handling questions, and which connected tools to use. Confirms every inference before writing.
 
 Produces the state folder `./ai-adoption-state/` with `company-context.md` and five tables. Tells you how to schedule the weekly check-in, because the plugin cannot create a recurring task itself.
 

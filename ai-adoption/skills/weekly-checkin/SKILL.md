@@ -16,6 +16,8 @@ argument-hint: "[week number]"
 
 The loop from `program.md`: collect, update, diagnose, act, digest. One row per company and week. Takes 15 minutes in Team mode, 5 in Founder mode. Ask in batches of two or three questions.
 
+Follow `${CLAUDE_PLUGIN_ROOT}/skills/frameworks/references/show-first.md`: do the work first from state and what is already known, show it (widget when available, table otherwise), and ask only for the gaps, with tappable options.
+
 Read first: the state folder's `company-context.md`; `companies.csv`; `checkins.csv`; `scorecard.csv`; `use_cases.csv`; `wins.md`; `${CLAUDE_PLUGIN_ROOT}/skills/frameworks/references/program.md`, `scorecard-model.md`, `failure-modes.md`, `personas.md`, `defining-moments.md`; `${CLAUDE_PLUGIN_ROOT}/skills/adapters/SKILL.md` (detection, approval gate).
 
 ## 1. Load context and the week

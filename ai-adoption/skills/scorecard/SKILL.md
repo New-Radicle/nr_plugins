@@ -15,6 +15,8 @@ argument-hint: "view | update | baseline"
 
 The program's evidence. If it is not in the scorecard, it did not happen. Status is computed from the numbers, never chosen.
 
+Follow `${CLAUDE_PLUGIN_ROOT}/skills/frameworks/references/show-first.md`: do the work first from state and what is already known, show it (widget when available, table otherwise), and ask only for the gaps, with tappable options.
+
 Read first: the state folder's `company-context.md` (mode, headcount, start date); `scorecard.csv`; `companies.csv`; `${CLAUDE_PLUGIN_ROOT}/skills/frameworks/references/scorecard-model.md`; `${CLAUDE_PLUGIN_ROOT}/skills/adapters/references/files.md` (keys and week rule).
 
 Action is `$1`. Default `view`.

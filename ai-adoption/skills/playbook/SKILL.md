@@ -17,6 +17,8 @@ argument-hint: "[role or team]"
 
 One page per role or team. Three workflows, not ten. Written so a person who has never opened the tool can paste the first prompt and get something useful in five minutes. Craft-respecting: AI removes the administrative tax; the expert stays the judge.
 
+Follow `${CLAUDE_PLUGIN_ROOT}/skills/frameworks/references/show-first.md`: do the work first from state and what is already known, show it (widget when available, table otherwise), and ask only for the gaps, with tappable options.
+
 Read first: the state folder's `company-context.md` (mode, data profile, never-in-prompts list, capabilities); `primitives.csv`; `use_cases.csv`; existing `<state>/outputs/playbook-*.md`; `${CLAUDE_PLUGIN_ROOT}/skills/archetypes/references/<archetype>.md`; `${CLAUDE_PLUGIN_ROOT}/skills/frameworks/references/ai-modes.md`; `${CLAUDE_PLUGIN_ROOT}/skills/frameworks/references/barriers.md`.
 
 If `primitives.csv` has no `priority_rank` values, stop and point to `/ai-adoption:prioritize`. A playbook built from an unranked list is a guess.

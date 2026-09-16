@@ -35,6 +35,10 @@ Read [GUIDE.md](GUIDE.md) for the whole program start to finish: who does what e
 
 Setup asks who you are (Rollout Lead, Sponsor, or cohort operator), which of five company archetypes is closest, your headcount, and four yes/no data-handling questions. It detects connected tools, confirms every choice, and creates `./ai-adoption-state/` with `company-context.md` and five tables. Every other skill reads that file first.
 
+## How it feels
+
+Every skill shows before it asks. Setup opens with a picture of the program, researches the company and detects your tools on its own, shows what it found and inferred for you to confirm or correct, and only then asks the few things it could not work out. Where the app can render widgets, answers are a tap; typed answers always work too.
+
 ## Skills
 
 | Skill | When | What it does |

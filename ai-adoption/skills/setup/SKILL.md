@@ -1,107 +1,103 @@
 ---
 name: setup
 description: >
-  Start an AI adoption program for a company. Detects connected tools, asks
-  which archetype is closest, infers the size mode from headcount, derives the
-  data-handling profile from four yes/no questions, records the Sponsor and
-  Rollout Lead, and creates the state folder from templates. Use when someone
-  says "set up the AI adoption program", "start the rollout", "onboard my
-  company", "initialize ai-adoption", or when no state folder exists and any
-  other /ai-adoption skill is invoked.
+  Start an AI adoption program for a company. Opens with a picture of what the
+  program is and how it works, then does the work first: public research on the
+  company, detection of connected tools, and inference of size mode, archetype,
+  and data-handling profile. Shows everything found for confirmation, asks only
+  what is still unknown, and creates the state folder. Use when someone says
+  "set up the AI adoption program", "start the rollout", "onboard my company",
+  "initialize ai-adoption", or when no state folder exists and any other
+  /ai-adoption skill is invoked.
 disable-model-invocation: true
-argument-hint: "[state folder path]"
+argument-hint: "[company website or state folder path]"
 ---
 
 # Setup
 
-You are starting a program that will run 6 or 12 weeks. Take 20-30 minutes. Ask in batches of two or three questions; never dump the whole list. Confirm the summary before writing anything.
+People get information before they are asked for any. Follow `${CLAUDE_PLUGIN_ROOT}/skills/frameworks/references/show-first.md` throughout: orient, work and show, ask only the gaps. The person's first answer should arrive after they have seen what you already know.
 
-Read first: `${CLAUDE_PLUGIN_ROOT}/skills/adapters/SKILL.md` (detection and gates), `${CLAUDE_PLUGIN_ROOT}/skills/archetypes/SKILL.md`, `${CLAUDE_PLUGIN_ROOT}/skills/frameworks/references/program.md`.
+Read first: `show-first.md` (above); `${CLAUDE_PLUGIN_ROOT}/skills/adapters/SKILL.md` (detection and gates); `${CLAUDE_PLUGIN_ROOT}/skills/archetypes/SKILL.md`; `${CLAUDE_PLUGIN_ROOT}/skills/frameworks/references/program.md`; `${CLAUDE_PLUGIN_ROOT}/skills/discover/SKILL.md`.
 
 ## 0. Existing state
 
-If `$1` is given, use it as the state folder. Otherwise look for `./ai-adoption-state/company-context.md`. If it exists, say what company and week it holds and ask whether to continue that program, start a second company (cohort), or start over. Never overwrite an existing folder without an explicit yes.
+If `$1` is a path, use it as the state folder. Otherwise look for `./ai-adoption-state/company-context.md`. If it exists, show its company and week and offer: continue, add a second company, or start over. Never overwrite without an explicit yes.
 
-## 1. Who is opening the plugin (entry point)
+## 1. Orient (no questions yet)
 
-Ask: "What's your role here?" Map the answer:
+Render the orientation widget (blueprint A in `show-first.md`), or its markdown equivalent:
 
-| Opener | Path |
-|---|---|
-| Director, manager, or lead without budget authority | **Rollout Lead first.** Continue setup, then produce a Sponsor Brief (`/ai-adoption:sponsor-brief`) and a draft company-context for the Sponsor to correct. Nothing that costs money, needs licenses, or messages the whole team runs until a Sponsor is named and has confirmed in chat. |
-| Founder, CEO, executive with budget | **Sponsor first.** Skip the brief. Name a Rollout Lead. If there is none, ask for two or three candidates who sit between leadership and operations and are self-directed; recommend one. |
-| Accelerator, incubator, studio, fund | **Cohort operator.** Say that cohort mode ships in a later release; offer to set up one portfolio company now in their own state folder. |
+- One line: "A six- or twelve-week program that makes AI how this company works, run from your own tools, with a person deciding at every step that matters."
+- The phase strip: Foundation, First Win, Workflow Layer, Depth, Institutional Layer. Current: Foundation.
+- "I will do now": research what is public about the company; check which tools are connected; work out size mode, archetype, and data-handling signals; draft the program calendar.
+- "I will ask you later": your role and the Rollout Lead; anything research could not settle; four data-handling questions if the signals are unclear; the start date.
+- Buttons: "Start" and "How does this work?" (the second loads `${CLAUDE_PLUGIN_ROOT}/skills/foundations/SKILL.md` and answers from it, then returns here).
 
-Record Sponsor and Rollout Lead names and roles.
+If `$1` is a website or the person named one, do not wait for "Start" to begin the work in section 2; start it and show the orientation while it runs.
 
-## 2. Company basics
+## 2. Work first, without asking
 
-Offer discovery first: "I can research what is public about the company and pre-fill the next steps; you confirm each finding before it is used. Run `/ai-adoption:discover` now, or answer a few questions instead?" If they choose discovery, pause setup here and resume at this step with the `## Discovery (confirmed)` section filled in.
+Run these together where the environment allows, and say in one line that they are running:
 
-Ask what discovery did not answer: company name, what it does in one sentence, headcount (people, not FTE), and whether there are distinct departments.
+| Work | How | Result |
+|---|---|---|
+| Public research | The `discover` skill's public-source pass via the `researcher` agent, all five areas, from `$1` or the website the person named. If no website is known, search by company name; if there is no name, this is the one thing to ask before starting. | Claims with source and confidence |
+| Tool detection | Detection procedure in `adapters/SKILL.md`, names only, no data read | Capability table |
+| Inference | From the claims and detection: size mode from headcount band; archetype from what the company does; data-profile signals from grants, contracts, sectors, and regulated data mentions; likely Sponsor and Rollout Lead pattern from size | Each marked "inferred" with its basis |
+| Calendar draft | Week 0 on next Monday; end date from the inferred mode | Dates |
 
-Infer size mode: 1-9 Founder, 10-50 Team, 50+ Department. State the inference and what it changes (from `program.md`), and confirm. In Department mode, ask which department goes first and record it as the scope.
+Connected-system shape reads (the opt-in part of `discover`) do not run here; they are offered after the data profile is confirmed.
 
-## 3. Archetype
+## 3. Show what was found
 
-Ask "Which of these is closest to you?" and show the five one-line archetypes from `archetypes/SKILL.md`. Then ask whether any team from another archetype should be added (for example a Programs team). Record archetype and additions.
+Render findings-review widgets (blueprint B), six rows each, in this order: identity and size, archetype signals, funding and obligations, data-profile signals, tools and systems, detected connectors. Every row carries a source or the reason for an inference, and a confidence. Confirm, Correct, Reject per row; "Confirm all shown" per widget.
 
-## 4. Data-handling profile
+Rules of evidence from `discover`: absence is not evidence; two sources for High; rejections are logged and never re-proposed. A corrected value replaces the claim with the person as source.
 
-Ask four yes/no questions, one message:
+After the last widget, show the inferred summary as one card: size mode, archetype (plus any added teams), data profile, connectors that will be used, program dates. Each line marked confirmed or inferred.
 
-1. Do you hold government grants or contracts with data management or reporting terms (e.g. DOE, NSF, NIH, or national equivalents)?
-2. Do you do defense, export-controlled, or controlled-unclassified work (DoD, ITAR/EAR, CUI, defense customers)?
-3. Do you handle personal data at scale, health data, or financial records?
-4. Do you work under customer NDAs or with unpublished research?
+## 4. Ask only the gaps
 
-Derive, cumulatively: Q1 or Q4 yes = Restricted. Q2 yes = Controlled. Q3 yes = Regulated. All no = Open.
+Question cards (blueprint C), three per batch at most, only for what is still unknown or inferred at Low confidence:
 
-State the profile and its effects:
+- Who is opening the plugin: "Founder, CEO, or executive with budget" / "Director, manager, or lead without budget authority" / "Accelerator, incubator, studio, or fund". This sets the entry point (Sponsor first, Rollout Lead first, cohort operator) exactly as before: Rollout-Lead-first ends with `sponsor-brief` and nothing that costs money runs until a Sponsor confirms; cohort operators are told cohort mode ships later and offered one company now.
+- Sponsor and Rollout Lead names, if not the same person.
+- Headcount, only if research found no band.
+- Archetype, only if inference was Low; show the five one-line options. Then: any team from another archetype to add.
+- The four data-handling questions, only where research gave no signal. Where it did, ask the person to confirm the derived profile instead. Cumulative rules: grants or NDAs = Restricted; defence, export-controlled, or controlled-unclassified work = Controlled; personal, health, or financial data at scale = Regulated; none = Open. State the effects (never-in-prompts list now for Restricted; connectors off, compliance owner, IP row High/High for Controlled; allow-list and anonymisation step for Regulated). The Rollout Lead may raise the profile, never lower it without the Sponsor.
+- Connector choices, as a confirmation of the detected table with the data-profile gate already applied. If nothing is connected, say files work end to end and connectors can be added later with no migration.
+- Start date, defaulting to the drafted one.
 
-- Restricted: write a "never in prompts" list from the grant or NDA terms (ask for the top items now); the AI handbook's data section is mandatory before Week 3.
-- Controlled: cloud connectors are off and will not be offered; files only; enterprise or API terms with no-training and data-residency assurances are required before any use; name a compliance owner now; risk matrix IP row is High/High.
-- Regulated: connector allow-list only (ask which); an anonymization step is added to every workflow that touches the data.
+Say, once: the plugin cannot create a recurring task; to make the weekly check-in automatic, create a weekly Routine or calendar reminder that runs `/ai-adoption:weekly-checkin`; it is safe to run late or twice. If a calendar adapter is in use, offer to draft the Week 0 alignment and Week 1 kickoff events, behind the approval gate.
 
-The Rollout Lead may raise the profile but not lower it; lowering needs the Sponsor's yes in chat.
+## 5. Confirm and write
 
-## 5. Capabilities
+One summary table, every line marked confirmed. On yes:
 
-Run the detection procedure from `adapters/SKILL.md`. Present a table: capability, what was detected, what will be used, fallback. Apply the data-profile gate before offering anything. Ask the user to confirm or change each choice. If nothing is connected, say plainly that files work end to end and connectors can be added later with no migration.
+1. Create the state folder from `${CLAUDE_PLUGIN_ROOT}/templates/` (`STATE-README.md` becomes `README.md`).
+2. Fill `company-context.md`. Write the `## Discovery (confirmed)` section from confirmed claims with sources. Leave the risk matrix and economics assumptions at the archetype and framework defaults, labelled "default, editable".
+3. Write `<state>/outputs/discovery-YYYY-MM-DD.md` with every claim and its verdict, the rejected list, and the sources, ending with `AI-assisted draft. Reviewed by: ________ (name, date)` (blank left empty).
+4. Write the `companies` row.
+5. Seed `scorecard` with the metric list for the mode, targets scaled to headcount; no channel-post metrics in Founder mode.
+6. Append a dated line to Notes and decisions: who set up, entry point, profile, counts of confirmed, corrected, rejected claims.
 
-## 6. Program calendar and scheduling
+If a connector state store was chosen, create the five tables there per `adapters/references/<backend>.md`, and still write `company-context.md` locally.
 
-Ask for the Week 0 start date (default: next Monday). Compute the end date from the mode.
+## 6. What happens next
 
-Say this about scheduling, verbatim in spirit: the plugin cannot create a recurring task for you. To make the weekly check-in automatic, create a weekly Routine (desktop app: Routines > New routine, local) or a calendar reminder that runs `/ai-adoption:weekly-checkin` on the day you choose. The check-in is safe to run late or twice.
+Render a status strip (blueprint D) with the next action as the button:
 
-If a calendar adapter is in use, offer to draft the Week 0 Sponsor alignment meeting and the Week 1 kickoff; apply the approval gate.
+- Rollout Lead first: `/ai-adoption:sponsor-brief`, then `assess-team` once the Sponsor confirms.
+- Sponsor first: `/ai-adoption:assess-team`, then `map-primitives`, `economics`, `prioritize`; one session in Founder mode.
+- Everyone: `/ai-adoption:week` at any time. Offer the connected-system shape reads from `discover` now that the profile is set, if the profile allows.
 
-## 7. Confirm and write
-
-Summarize everything in one table. On yes:
-
-1. Create the state folder from `${CLAUDE_PLUGIN_ROOT}/templates/` (copy every file; `STATE-README.md` becomes `README.md`).
-2. Fill `company-context.md` placeholders. Leave the risk matrix and economics assumptions sections with the archetype defaults from `archetypes/references/<code>.md` and `frameworks/references/ai-modes.md`, labelled "default, editable".
-3. Write the `companies` row.
-4. Seed `scorecard` with the metric list for the mode (`frameworks/references/scorecard-model.md`), baseline blank, targets scaled: use-case targets multiply by headcount; channel-post targets are omitted in Founder mode.
-5. Append a dated line to "Notes and decisions" in `company-context.md`: who set up, entry point, profile.
-
-If a connector state store was chosen, create the five tables there using the recipe in `adapters/references/<backend>.md` and still write `company-context.md` locally, because every skill reads it from the folder.
-
-## 8. What happens next
-
-Tell the user, by path:
-
-- Rollout Lead first: "Next: `/ai-adoption:sponsor-brief`. Send it. When the Sponsor confirms, run `/ai-adoption:assess-team`."
-- Sponsor first: "Next: `/ai-adoption:assess-team`, then `map-primitives`, `economics`, `prioritize`. In Founder mode these run in one session."
-- Everyone: "Run `/ai-adoption:week` any time to see what is due."
-
-Do not run those skills now unless asked.
+Do not run those skills unless asked.
 
 ## Rules
 
+- No question before the orientation and the findings review, except the company name when nothing else is known.
 - Never post, send, or schedule without the approval gate.
-- Never write persona guesses during setup, even if the user volunteers them; note "persona mapping happens in `map-personas`".
+- Never write persona guesses during setup; persona mapping happens in `map-personas`.
+- Public research sends the company name and website to search tools; say so once in the orientation.
 - No company-specific facts go into any plugin file; everything lives in the state folder.
-- If the user is not the Sponsor and asks to skip the Sponsor Brief, do it, but record "Sponsor not yet confirmed" in `company-context.md` and remind at every write that costs money or goes team-wide.
+- If the person is not the Sponsor and asks to skip the Sponsor Brief, do it, record "Sponsor not yet confirmed", and remind at every write that costs money or goes team-wide.

@@ -14,6 +14,8 @@ disable-model-invocation: true
 
 One page. Written in the company's own terms, for someone who has five minutes and budget authority. Designed to be forwarded unchanged.
 
+Follow `${CLAUDE_PLUGIN_ROOT}/skills/frameworks/references/show-first.md`: do the work first from state and what is already known, show it (widget when available, table otherwise), and ask only for the gaps, with tappable options.
+
 Read first: the state folder's `company-context.md`; `primitives.csv` and `scorecard.csv` if populated; `${CLAUDE_PLUGIN_ROOT}/skills/archetypes/references/<archetype>.md`; `${CLAUDE_PLUGIN_ROOT}/skills/frameworks/references/ai-modes.md`.
 
 ## Inputs

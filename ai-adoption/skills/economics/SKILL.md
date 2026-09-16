@@ -18,6 +18,8 @@ argument-hint: "[--report]"
 
 Pass 2. Produces a defensible range, not a promise. Every figure carries a source: the user, the plugin's assumptions, or the Economic Index release used. Nothing here is a measurement until documented use cases replace it after two weeks of check-ins.
 
+Follow `${CLAUDE_PLUGIN_ROOT}/skills/frameworks/references/show-first.md`: do the work first from state and what is already known, show it (widget when available, table otherwise), and ask only for the gaps, with tappable options.
+
 Read first: `company-context.md` (Identity, Economics assumptions, Notes); `primitives` via `read_table`; `${CLAUDE_PLUGIN_ROOT}/skills/archetypes/references/<code>.md` (occupation candidates); `${CLAUDE_PLUGIN_ROOT}/skills/frameworks/references/ai-modes.md`; `${CLAUDE_PLUGIN_ROOT}/skills/economics/references/econ-index-cached.md`; `${CLAUDE_PLUGIN_ROOT}/skills/economics/references/salary-defaults.md`; `${CLAUDE_PLUGIN_ROOT}/skills/adapters/SKILL.md`.
 
 If `primitives` is empty, stop and say to run `/ai-adoption:map-primitives`.

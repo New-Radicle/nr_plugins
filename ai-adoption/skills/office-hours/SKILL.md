@@ -15,6 +15,8 @@ argument-hint: "[session date]"
 
 The mid-point release valve. Blockers that have been sitting in check-ins for six weeks get a live demo, and the people who have been asking hard questions get the floor, framed as what they are: the quality gate.
 
+Follow `${CLAUDE_PLUGIN_ROOT}/skills/frameworks/references/show-first.md`: do the work first from state and what is already known, show it (widget when available, table otherwise), and ask only for the gaps, with tappable options.
+
 Read first: `<state>/company-context.md`; `<state>/checkins.csv`; `<state>/use_cases.csv`; `<state>/errors.md`; `<state>/scorecard.csv` (current week); `<state>/personas.private.md` (counts only); `${CLAUDE_PLUGIN_ROOT}/skills/frameworks/references/failure-modes.md`; `${CLAUDE_PLUGIN_ROOT}/skills/frameworks/references/barriers.md`; `${CLAUDE_PLUGIN_ROOT}/skills/frameworks/references/defining-moments.md`.
 
 | Mode | What changes |
