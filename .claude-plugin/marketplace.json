@@ -9,6 +9,23 @@
       "source": "./new-radicle-os",
       "description": "New Radicle's team operating system for Claude Cowork. Includes shared context, founder agent simulations, the Document Hub pipeline, decision-framework components, and structured sessions.",
       "version": "0.5.0"
+    },
+    {
+      "name": "ai-adoption",
+      "source": "./ai-adoption",
+      "description": "Run a structured AI adoption program inside your own tools: assess the team, map operational primitives, size the economics, and execute a 6- or 12-week rollout with weekly check-ins, a scorecard, and an impact report. Works with zero connectors or with Notion, Airtable, Google Drive, Slack, Gmail, and Google Calendar.",
+      "version": "0.1.0",
+      "author": {
+        "name": "New Radicle"
+      },
+      "category": "ai-adoption",
+      "tags": [
+        "ai-adoption",
+        "change-management",
+        "rollout",
+        "primitives",
+        "scorecard"
+      ]
     }
   ]
 }

@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|compact",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "if [ -f \"./ai-adoption-state/company-context.md\" ]; then printf '## AI Adoption plugin\\nState folder found at ./ai-adoption-state. Before running any /ai-adoption skill, read ./ai-adoption-state/company-context.md. Run /ai-adoption:week to see what is due.\\n'; else printf '## AI Adoption plugin\\nNo ./ai-adoption-state folder here. Run /ai-adoption:setup to start a program, or tell the skill where an existing state folder lives.\\n'; fi",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  }
+}
