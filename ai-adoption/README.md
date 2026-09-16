@@ -26,6 +26,9 @@ claude --plugin-dir ./ai-adoption
 
 ## Start
 
+Read [GUIDE.md](GUIDE.md) for the whole program start to finish: who does what each week, what each skill asks and produces, and where the plugin stops for a person to decide.
+
+
 ```
 /ai-adoption:setup
 ```
@@ -37,6 +40,7 @@ Setup asks who you are (Rollout Lead, Sponsor, or cohort operator), which of fiv
 | Skill | When | What it does |
 |---|---|---|
 | `setup` | Week 0 | Archetype, size mode, data profile, capabilities, entry point, state folder |
+| `discover` | Week 0, optional | A research agent gathers public facts about the company (and, with opt-in, the shape of connected systems); a person confirms each claim before it is used |
 | `sponsor-brief` | Week 0 | One page for the executive who can approve the program |
 | `assess-team` | Week 0 | Scores team health on seven dimensions, sets baselines |
 | `map-primitives` | Week 0 | Catalogs operational primitives with status, AI mode, speedup band, quadrant |
@@ -58,7 +62,7 @@ Setup asks who you are (Rollout Lead, Sponsor, or cohort operator), which of fiv
 
 Reference skills loaded automatically when needed: `foundations` (the five layers everyone needs: the model, what you feed it, what it can reach, how it runs, whether you can trust it; plus a glossary and twenty-minute exercises), `frameworks` (personas, failure modes, barriers, defining moments, team rubric, AI modes, scorecard model, program calendar), `archetypes` (five starter libraries plus physical-work primitives), `adapters` (the capability contract and one recipe per backend).
 
-Agent: `adoption-coach`, for resistance, stalled adoption, or "where do I start" questions.
+Agents: `adoption-coach`, for resistance, stalled adoption, or "where do I start" questions; `researcher`, the read-only public-source agent behind `discover`.
 
 ## Modes
 
@@ -79,7 +83,8 @@ Setup derives a profile from four questions. Restricted writes a never-in-prompt
 3. Controlled profile disables cloud adapters; the plugin does not offer to re-enable them.
 4. Use cases carry a visibility flag only the author changes.
 5. Every generated document ends with an "AI-assisted draft. Reviewed by:" line the plugin never fills in.
-6. Economic figures cite the Economic Index release used and are labelled cached when the connector is absent. Speedup bands and success rates are the plugin's own assumptions, editable per company.
+6. Discovery proposes, people confirm: nothing a research agent finds is written until a person has confirmed it, sources are public or the shape of connected systems only, and individuals are never looked up.
+7. Economic figures cite the Economic Index release used and are labelled cached when the connector is absent. Speedup bands and success rates are the plugin's own assumptions, editable per company.
 
 ## Scheduling
 

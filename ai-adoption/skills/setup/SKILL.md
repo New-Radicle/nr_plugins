@@ -36,7 +36,9 @@ Record Sponsor and Rollout Lead names and roles.
 
 ## 2. Company basics
 
-Ask: company name, what it does in one sentence, headcount (people, not FTE), and whether there are distinct departments.
+Offer discovery first: "I can research what is public about the company and pre-fill the next steps; you confirm each finding before it is used. Run `/ai-adoption:discover` now, or answer a few questions instead?" If they choose discovery, pause setup here and resume at this step with the `## Discovery (confirmed)` section filled in.
+
+Ask what discovery did not answer: company name, what it does in one sentence, headcount (people, not FTE), and whether there are distinct departments.
 
 Infer size mode: 1-9 Founder, 10-50 Team, 50+ Department. State the inference and what it changes (from `program.md`), and confirm. In Department mode, ask which department goes first and record it as the scope.
 

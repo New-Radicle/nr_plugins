@@ -60,6 +60,12 @@
 | Loaded cost per FTE (regional) | {{fte_cost}} | user input or regional default, verify |
 | Economic Index release used | {{econ_index_release}} | live connector or cached table |
 
+## Discovery (confirmed)
+
+<!-- Written by /ai-adoption:discover, confirmed claims only, each with source and date. Later skills skip intake questions this section answers. -->
+
+{{discovery}}
+
 ## Risk matrix
 
 <!-- Filled by /ai-adoption:risk-matrix. Pre-filled from archetype defaults and data profile. -->
